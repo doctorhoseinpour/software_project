@@ -5,7 +5,7 @@ from sqlalchemy import (Column,
                         String,
                         UniqueConstraint
                         )
-
+from sqlalchemy.orm import relationship
 
 from database_configs import Base
 
@@ -28,11 +28,15 @@ class FavouriteCourses(Base):
     student_id = Column(
         Integer(),
         ForeignKey("student.id"),
+        nullable=False,
     )
     course_id = Column(
         Integer(),
         ForeignKey("course.id"),
+        nullable=False,
     )
+    student = relationship("Student")
+    course = relationship("Course")
     __table_args__ = (
         UniqueConstraint("student_id", "course_id", name="student_course_unique_constraint"),
     )
