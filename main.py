@@ -8,11 +8,11 @@ from database_configs import get_db
 if __name__ == "__main__":
     app = FastAPI()
     db, engine = get_db(
-        user='alireza',
-        password='ali.1378$$',
-        db='test_db',
-        host='localhost',
-        port=5432,
+        user=,
+        password=,
+        db=,
+        host=,
+        port=,
     )
 
 

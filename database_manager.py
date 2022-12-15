@@ -3,11 +3,11 @@ from models import *
 
 if __name__ == "__main__":
     db, engine = get_db(
-        user='alireza',
-        password='ali.1378$$',
-        db='test_db',
-        host='localhost',
-        port=5432,
+        user=,
+        password=,
+        db=,
+        host=,
+        port=,
     )
 
     Base.metadata.drop_all(
