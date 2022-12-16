@@ -5,6 +5,7 @@ from sqlalchemy import (Column,
                         String,
                         UniqueConstraint
                         )
+
 from sqlalchemy.orm import relationship
 
 from database_configs import Base
